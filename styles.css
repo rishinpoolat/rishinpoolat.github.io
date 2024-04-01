@@ -20,7 +20,7 @@ p {
 
 h2,
 h3 {
-  font-weight: 400;
+  font-weight: 500;
   color: #f7564a;
 }
 
@@ -35,7 +35,7 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
@@ -98,11 +98,20 @@ div {
 
 .designation {
   color: white;
-
   font-weight: 400;
   font-style: normal;
 }
+.project-card,
+.experience-card,
+.education-card {
+  border: #484849 solid 1px;
+  border-radius: 10px;
+  padding: 20px;
+}
 
+.project-link {
+  font-weight: 1000;
+}
 a {
   color: #fff;
   text-decoration: none;
