@@ -1,0 +1,187 @@
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: black;
+  color: white;
+  margin: 2rem;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-weight: 400;
+  color: #f7564a;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.5;
+  color: #c2c2c2;
+}
+
+div {
+  margin: 2rem 0;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 0 1rem;
+  transition: background-color 0.3s;
+}
+.hi {
+  font-size: 28px;
+}
+.name {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f7564a;
+}
+.social-link:hover {
+  background-color: #484849;
+}
+
+.links a i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.resume-btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.resume-btn:hover {
+  background-color: #333334;
+}
+
+.designation {
+  color: white;
+
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  body {
+    margin: 2rem 8rem;
+  }
+}
+
+/* Media query for large screens */
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px; /* Increase base font size */
+  }
+
+  h1 {
+    font-size: 48px; /* Increase h1 font size */
+  }
+
+  h2 {
+    font-size: 36px; /* Increase h2 font size */
+  }
+
+  h3 {
+    font-size: 24px; /* Increase h3 font size */
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expand-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10%; /* Width expands to match the width of the text */
+  }
+}
