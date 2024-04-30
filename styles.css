@@ -117,6 +117,12 @@ a {
   text-decoration: none;
 }
 
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 1rem 0;
+}
+
 @media (min-width: 768px) {
   body {
     margin: 2rem 8rem;
