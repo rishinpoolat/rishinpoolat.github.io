@@ -103,7 +103,9 @@ div {
 }
 .project-card,
 .experience-card,
-.education-card {
+.education-card,
+.certification-card,
+.hackathon-card {
   border: #484849 solid 1px;
   border-radius: 10px;
   padding: 20px;
