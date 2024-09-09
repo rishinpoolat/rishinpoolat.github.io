@@ -76,7 +76,9 @@ div {
 .social-link:hover {
   background-color: #484849;
 }
-
+.certification-link {
+  margin-right: 20px;
+}
 .links a i {
   font-size: 2rem;
   color: #fff;
