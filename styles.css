@@ -111,6 +111,17 @@ div {
   border: #484849 solid 1px;
   border-radius: 10px;
   padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.experience-card:hover,
+.education-card:hover,
+.certification-card:hover,
+.hackathon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(247, 86, 74, 0.2);
 }
 
 .project-link {
