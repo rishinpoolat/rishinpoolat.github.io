@@ -215,3 +215,124 @@ footer {
     width: 10%; /* Width expands to match the width of the text */
   }
 }
+
+/* Timeline Styling */
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding: 20px 0 40px 0;
+}
+
+/* The actual timeline (the horizontal ruler) */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  height: 4px;
+  background-color: #484849;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  border-radius: 2px;
+}
+
+/* Container around content */
+.timeline-item {
+  position: relative;
+  min-width: 250px;
+  max-width: 300px;
+  margin: 0 15px;
+  padding: 0 10px;
+  animation: slide-in-right 0.6s ease-out forwards;
+  opacity: 0;
+  flex-shrink: 0;
+}
+
+/* Add effect for timeline items */
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* The dots/circles on the timeline */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #f7564a;
+  border: 4px solid #484849;
+  border-radius: 50%;
+  z-index: 1;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* The timeline date */
+.timeline-date {
+  font-weight: 600;
+  color: #f7564a;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* The timeline content */
+.timeline-content {
+  padding: 20px;
+  background-color: rgba(72, 72, 73, 0.1);
+  border: 1px solid #484849;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(247, 86, 74, 0.2);
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 767px) {
+  .timeline-container {
+    flex-direction: column;
+    padding: 0 0 0 30px;
+    overflow-x: visible;
+  }
+  
+  .timeline-container::after {
+    height: 100%;
+    width: 4px;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    right: auto;
+  }
+  
+  .timeline-item {
+    min-width: auto;
+    max-width: none;
+    width: 85%;
+    margin: 15px 0;
+    padding-left: 30px;
+  }
+  
+  .timeline-item::after {
+    left: 5px;
+    top: 20px;
+    bottom: auto;
+    transform: none;
+  }
+  
+  .timeline-date {
+    text-align: left;
+  }
+}
