@@ -129,28 +129,34 @@
           <p><strong>Duration:</strong> March 2024 - December 2025</p>
           <p><strong>Location:</strong> Leicester, United Kingdom</p>
           <p>
-            • Architected e-commerce platform using Next.js, Stripe payments,
-            Supabase, serving 2,000+ daily users with real-time inventory
-            synchronization, automated email workflows via Trigger.dev,
-            maintaining 99.5% uptime across revenue streams.
+            • Built and maintained OFFseason's e-commerce platform using
+            Next.js, TypeScript, and Stripe, delivering the full customer
+            journey from browsing and flash sales to secure checkout and order
+            tracking.
           </p>
           <p>
-            • Developed Tracy POS system with real-time inventory tracking
-            across 2 locations, multi-payment processing, VAT management,
-            barcode scanning, sales analytics, supporting 2,000+ daily
-            transactions minimizing inventory discrepancies by 75%.
+            • Developed Tracy, an in-house point-of-sale and inventory system
+            serving the company's two retail stores, with barcode checkout,
+            Typesense-powered search, multi-payment processing, and four UK
+            VAT schemes.
           </p>
           <p>
-            • Engineered AI agent ecosystem using LLMs, Model Context Protocol
-            (MCP), n8n workflow orchestration, processing 500+ daily operations
-            including order confirmations, payment failures, business
-            notifications with 95% automation success rate.
+            • Engineered an AI-powered WhatsApp assistant enabling the team to
+            query live sales and inventory data in plain English, built using
+            OpenAI models and the Model Context Protocol (MCP) to connect to
+            company databases.
           </p>
           <p>
-            • Implemented system architecture with TypeScript, PostgreSQL,
-            Docker containerization, CI/CD pipelines, achieving zero-downtime
-            deployments with integrated analytics dashboards for real-time
-            business intelligence across retail operations.
+            • Automated core workflows including order confirmations,
+            payment-failure alerts, and customer emails using Trigger.dev and
+            Resend, and built an OpenAI-powered service that turns production
+            errors into detailed GitHub issues.
+          </p>
+          <p>
+            • Created a suite of web-scraping and data-pipeline services with
+            Puppeteer and Bun to collect product and pricing data from
+            external sources, storing it in Supabase through scheduled
+            background jobs.
           </p>
         </div>
         <div class="experience-card">
@@ -159,28 +165,26 @@
           <p><strong>Duration:</strong> July 2023 - December 2023</p>
           <p><strong>Location:</strong> Kerala, India</p>
           <p>
-            • Led development of a high-impact CMS project with microservices
-            architecture and comprehensive testing, built REST APIs using
-            Node.js and React component libraries, maintaining 98% API uptime
-            through CI/CD pipelines and Docker containerization.
+            • Developed a full-stack content management system for internal
+            teams using React, Node.js, and PostgreSQL, providing an intuitive
+            interface and REST APIs to create, organize, and publish content
+            efficiently.
           </p>
           <p>
-            • Established scalable file upload system with AWS S3, EC2, and
-            CloudFront CDN distribution, implementing React hooks for state
-            management, reducing storage costs by 30% and improving reliability
-            through scheduled backup.
+            • Built a social media platform enabling users to share images,
+            like, comment, follow, and interact, with relational data in AWS
+            RDS, chat messages in DynamoDB, and media served through S3 and
+            CloudFront.
           </p>
           <p>
-            • Excelled in agile scrum collaboration methodologies and
-            implemented comprehensive code quality monitoring tools with Jest
-            unit testing framework attaining 85% test coverage rates. Resulted
-            in a 40% boost in team efficiency and 95% task completion rate.
+            • Implemented real-time chat and notifications using Socket.io,
+            with RabbitMQ handling message queues and Redis providing caching
+            to keep interactions fast and reliable as usage grew.
           </p>
           <p>
-            • Enhanced real-time communication using Socket.io and React with
-            Redis caching and connection pooling, minimizing latency by 70% and
-            implemented optimizations within PostgreSQL database, resulting in a
-            30% reduction in resource consumption.
+            • Deployed and scaled both applications on AWS using EC2, RDS,
+            and load balancing, with PM2 for process management and monitoring
+            to ensure high availability and reliable performance.
           </p>
         </div>
       </div>
@@ -294,6 +298,60 @@
           <br />
           <a
             href="https://github.com/rishinpoolat/rfp-management-system"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+            >View on GitHub</a
+          >
+        </div>
+        <div class="project-card">
+          <h3>Meeting Scheduler Agent</h3>
+          <p>
+            Autonomous Gmail-and-Calendar scheduling agent powered by the
+            Gemini API. Classifies incoming emails into scheduling intents,
+            books confirmed events when a proposed time is free, and finds
+            and offers open slots (with tentative holds to prevent
+            double-booking) when asked for availability. Works around a
+            discovered LLM flaw where the model would non-deterministically
+            corrupt meeting times in prose, by having it emit a verified
+            placeholder that Python substitutes with the guaranteed-correct
+            value. All replies are created as Gmail drafts for manual review,
+            never auto-sent.
+          </p>
+          <br />
+          <p>
+            <strong>Tech Stack:</strong> Python, Google Gemini API, Gmail API,
+            Google Calendar API, OAuth2
+          </p>
+          <br />
+          <a
+            href="https://github.com/rishinpoolat/meeting-scheduler"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+            >View on GitHub</a
+          >
+        </div>
+        <div class="project-card">
+          <h3>Property Transaction Extraction System</h3>
+          <p>
+            Full-stack pipeline that extracts, translates, and structures
+            property transaction data from Tamil-language Encumbrance
+            Certificate PDFs. A rate-limited BullMQ worker batches pages,
+            translates Tamil to English with a 30-day Redis cache to cut
+            repeat API calls, parses fields like buyer/seller names, survey
+            numbers, and document dates into a searchable PostgreSQL schema,
+            and streams live progress back to the frontend over
+            Server-Sent Events.
+          </p>
+          <br />
+          <p>
+            <strong>Tech Stack:</strong> Next.js, TypeScript, Express,
+            PostgreSQL, Drizzle ORM, Redis, BullMQ
+          </p>
+          <br />
+          <a
+            href="https://github.com/rishinpoolat/pdf-transaction-extraction"
             target="_blank"
             rel="noopener noreferrer"
             class="project-link"
