@@ -309,14 +309,17 @@
           <p>
             Autonomous Gmail-and-Calendar scheduling agent powered by the
             Gemini API. Classifies incoming emails into scheduling intents,
-            books confirmed events when a proposed time is free, and finds
-            and offers open slots (with tentative holds to prevent
-            double-booking) when asked for availability. Works around a
-            discovered LLM flaw where the model would non-deterministically
-            corrupt meeting times in prose, by having it emit a verified
-            placeholder that Python substitutes with the guaranteed-correct
-            value. All replies are created as Gmail drafts for manual review,
-            never auto-sent.
+            books confirmed events when a proposed time is free, finds and
+            offers open slots (with tentative holds to prevent
+            double-booking) when asked for availability, and now handles
+            cancellation and rescheduling of existing confirmed meetings,
+            checking free/busy on the new time before writing so a conflict
+            leaves the original booking untouched. Works around a discovered
+            LLM flaw where the model would non-deterministically corrupt
+            meeting times in prose, by having it emit a verified placeholder
+            that Python substitutes with the guaranteed-correct value. All
+            replies are created as Gmail drafts for manual review, never
+            auto-sent.
           </p>
           <br />
           <p>
