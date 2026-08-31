@@ -4,7 +4,7 @@ Software Engineer with expertise in AI/ML, Full-Stack Development, and Cloud Com
 
 ## 🚀 Currently
 
-Software Engineer at **OFFSeason** - Building production systems serving 2,000+ daily users.
+Software Engineer at **Acugence Systems** (Doha, Qatar) — building client-facing web platforms and customizing Odoo ERP.
 
 ## 🎓 Education
 
@@ -13,17 +13,18 @@ Software Engineer at **OFFSeason** - Building production systems serving 2,000+ 
 
 ## 💼 Experience
 
-- **OFFSeason** - Software Engineer (March 2025 - Present)
+- **Acugence Systems** - Software Engineer (June 2026 - Present)
+- **OFFSeason** - Software Engineer (March 2024 - December 2025)
 - **Qburst** - Software Engineer (July 2023 - December 2023)
+- **Obraz** - Software Engineer (August 2021 - June 2023)
 
 ## 🛠 Tech Stack
 
-**Languages:** TypeScript, JavaScript, Python, SQL, C, HTML/CSS  
-**Frontend:** React.js, Next.js 15, TailwindCSS, Framer Motion, Zustand, Redux  
-**Backend:** Node.js, Express.js, FastAPI, Hono, Bun, Socket.io  
-**AI/ML:** LLMs, AI Agents, Model Context Protocol (MCP), NLP, TensorFlow, PyTorch, DeBERTa  
-**Databases:** PostgreSQL, Supabase, MongoDB, Redis, Drizzle ORM, Prisma  
-**Cloud & DevOps:** AWS (S3, EC2, CloudFront), Docker, CI/CD, N8N, Jest, Puppeteer, Linux  
+**Languages:** TypeScript, JavaScript, Python, SQL, C#, HTML/CSS  
+**Frontend & Backend:** React.js, Next.js, Node.js, Express.js, ASP.NET Core, FastAPI, TailwindCSS, Socket.io  
+**AI & Machine Learning:** LLMs, RAG, Vector Databases, MCP, AI Agents, Claude Code, OpenAI API, Google Gemini API, TensorFlow, DeBERTa, LightGBM  
+**Databases & Cloud:** PostgreSQL, MongoDB, Redis, MySQL, DynamoDB, AWS (EC2, RDS, S3, CloudFront)  
+**DevOps & Tools:** Docker, Git, CI/CD, RabbitMQ, BullMQ, Odoo, Puppeteer, Stripe, Linux
 
 ## 🏆 Certifications
 
