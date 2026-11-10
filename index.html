@@ -18,13 +18,30 @@
     <title>MohammedRishin</title>
   </head>
   <body>
-    <div class="heading">
-      <h1>
+    <a class="skip-link" href="#about">Skip to content</a>
+    <span class="scroll-progress" aria-hidden="true"><span></span></span>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Mohammed Rishin Poolat, back to top">Rishin<span>.</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="public/MohammedRishinPoolat.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">Resume</a>
+      </nav>
+    </header>
+
+    <div class="heading" id="top">
+      <h1 class="load-in">
         <span class="hi">Hi, I'm </span>
         <span class="name">Mohammed Rishin Poolat </span>
         <span role="img" aria-label="Waving hand emoji">👋</span>
       </h1>
-      <h3 class="designation">Researcher, AI &amp; Data Science</h3>
+      <h3 class="designation load-in" style="--d: 0.12s">Researcher, AI &amp; Data Science</h3>
     </div>
     <div id="about">
       <h2>About</h2>
@@ -85,66 +102,64 @@
     </div>
     <div id="timeline">
       <h2>Timeline</h2>
-      <div class="timeline-scroll">
-      <div class="timeline-container">
-        <div class="timeline-item">
-          <div class="timeline-date">November 2026 - Present</div>
-          <div class="timeline-content">
+      <ol class="journey" id="journey-list">
+        <li class="j-item">
+          <div class="j-card">
+            <span class="j-date">November 2026 - Present</span>
             <h3>Researcher, AI &amp; Data Science</h3>
-            <p>Weill Cornell Medicine-Qatar</p>
-            <p>Doha, Qatar</p>
+            <p class="j-org">Weill Cornell Medicine-Qatar</p>
+            <p class="j-loc"><i class="fas fa-map-marker-alt"></i> Doha, Qatar</p>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">June 2026 - October 2026</div>
-          <div class="timeline-content">
+        </li>
+        <li class="j-item">
+          <div class="j-card">
+            <span class="j-date">June 2026 - October 2026</span>
             <h3>Software Engineer</h3>
-            <p>Acugence Systems</p>
-            <p>Doha, Qatar</p>
+            <p class="j-org">Acugence Systems</p>
+            <p class="j-loc"><i class="fas fa-map-marker-alt"></i> Doha, Qatar</p>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">March 2024 - December 2025</div>
-          <div class="timeline-content">
+        </li>
+        <li class="j-item">
+          <div class="j-card">
+            <span class="j-date">March 2024 - December 2025</span>
             <h3>Software Engineer</h3>
-            <p>OFFSeason</p>
-            <p>Leicester, United Kingdom</p>
+            <p class="j-org">OFFSeason</p>
+            <p class="j-loc"><i class="fas fa-map-marker-alt"></i> Leicester, United Kingdom</p>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">January 2024 - July 2025</div>
-          <div class="timeline-content">
+        </li>
+        <li class="j-item j-edu">
+          <div class="j-card">
+            <span class="j-date">January 2024 - July 2025</span>
             <h3>MSc Advanced Computer Science</h3>
-            <p>University of Leicester</p>
-            <p>Leicester, United Kingdom</p>
+            <p class="j-org">University of Leicester</p>
+            <p class="j-loc"><i class="fas fa-map-marker-alt"></i> Leicester, United Kingdom</p>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">July 2023 - December 2023</div>
-          <div class="timeline-content">
+        </li>
+        <li class="j-item">
+          <div class="j-card">
+            <span class="j-date">July 2023 - December 2023</span>
             <h3>Software Engineer</h3>
-            <p>Qburst</p>
-            <p>Kerala, India</p>
+            <p class="j-org">Qburst</p>
+            <p class="j-loc"><i class="fas fa-map-marker-alt"></i> Kerala, India</p>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">June 2019 - July 2023</div>
-          <div class="timeline-content">
+        </li>
+        <li class="j-item j-edu">
+          <div class="j-card">
+            <span class="j-date">June 2019 - July 2023</span>
             <h3>B.Tech Computer Science and Engineering</h3>
-            <p>APJ Abdul Kalam Technological University</p>
-            <p>Kerala, India</p>
+            <p class="j-org">APJ Abdul Kalam Technological University</p>
+            <p class="j-loc"><i class="fas fa-map-marker-alt"></i> Kerala, India</p>
           </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">August 2021 - June 2023</div>
-          <div class="timeline-content">
+        </li>
+        <li class="j-item">
+          <div class="j-card">
+            <span class="j-date">August 2021 - June 2023</span>
             <h3>Software Engineer</h3>
-            <p>Obraz</p>
-            <p>Kerala, India</p>
+            <p class="j-org">Obraz</p>
+            <p class="j-loc"><i class="fas fa-map-marker-alt"></i> Kerala, India</p>
           </div>
-        </div>
-      </div>
-      </div>
+        </li>
+      </ol>
     </div>
     <div id="experience">
       <h2>Experience</h2>
@@ -833,8 +848,12 @@
         </div>
       </div>
     </div>
+    <button class="to-top" type="button" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
     <footer>
       <p>&copy; 2026 Mohammed Rishin Poolat. All rights reserved.</p>
     </footer>
+    <script src="./main.js"></script>
   </body>
 </html>
