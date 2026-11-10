@@ -1,10 +1,10 @@
 # Mohammed Rishin Poolat - Portfolio
 
-Software Engineer with expertise in AI/ML, Full-Stack Development, and Cloud Computing.
+AI & Data Science Researcher working on wearable AI for precision health, with a background in AI agents, machine learning and full-stack engineering.
 
 ## 🚀 Currently
 
-Software Engineer at **Acugence Systems** (Doha, Qatar) — building client-facing web platforms and customizing Odoo ERP.
+Researcher, AI & Data Science at **Weill Cornell Medicine-Qatar** (Doha, Qatar) — building and training machine learning models and AI agent systems on wearable data for precision health.
 
 ## 🎓 Education
 
@@ -13,18 +13,20 @@ Software Engineer at **Acugence Systems** (Doha, Qatar) — building client-faci
 
 ## 💼 Experience
 
-- **Acugence Systems** - Software Engineer (June 2026 - Present)
+- **Weill Cornell Medicine-Qatar** - Researcher, AI & Data Science (November 2026 - Present)
+- **Acugence Systems** - Software Engineer (June 2026 - October 2026)
 - **OFFSeason** - Software Engineer (March 2024 - December 2025)
 - **Qburst** - Software Engineer (July 2023 - December 2023)
 - **Obraz** - Software Engineer (August 2021 - June 2023)
 
 ## 🛠 Tech Stack
 
-**Languages:** TypeScript, JavaScript, Python, SQL, C#, HTML/CSS  
-**Frontend & Backend:** React.js, Next.js, Node.js, Express.js, ASP.NET Core, FastAPI, TailwindCSS, Socket.io  
-**AI & Machine Learning:** LLMs, RAG, Vector Databases, MCP, AI Agents, Claude Code, OpenAI API, Google Gemini API, TensorFlow, DeBERTa, LightGBM  
-**Databases & Cloud:** PostgreSQL, MongoDB, Redis, MySQL, DynamoDB, AWS (EC2, RDS, S3, CloudFront)  
-**DevOps & Tools:** Docker, Git, CI/CD, RabbitMQ, BullMQ, Odoo, Puppeteer, Stripe, Linux
+**Languages:** Python, SQL, TypeScript, JavaScript, C#, HTML/CSS  
+**Machine Learning & Data Science:** Machine Learning, Deep Learning, Time-Series Analysis, Wearable Sensor Data, NLP, Computer Vision, PyTorch, TensorFlow, scikit-learn, Keras, LightGBM, DeBERTa, NumPy, Pandas, OpenCV, Jupyter  
+**Generative AI & Agents:** LLMs, AI Agents, Multi-LLM Orchestration, MCP, RAG, Vector Databases, OpenAI API, Google Gemini API, Claude Code  
+**Backend & Frontend:** FastAPI, Node.js, Express.js, ASP.NET Core, React.js, Next.js, TailwindCSS, Socket.io  
+**Databases & Cloud:** PostgreSQL, MongoDB, Redis, MySQL, DynamoDB, Supabase, AWS (EC2, RDS, S3, CloudFront)  
+**DevOps & Tools:** Docker, Git, CI/CD, Linux, RabbitMQ, BullMQ, n8n, Odoo, Puppeteer, Stripe
 
 ## 🏆 Certifications
 
