@@ -1,10 +1,10 @@
 # Mohammed Rishin Poolat - Portfolio
 
-AI & Data Science Researcher working on wearable AI for precision health, with a background in AI agents, machine learning and full-stack engineering.
+AI & Data Science Researcher building AI agents, machine learning models and data science pipelines, with a background in full-stack engineering.
 
 ## 🚀 Currently
 
-Researcher, AI & Data Science at **Weill Cornell Medicine-Qatar** (Doha, Qatar) — building and training machine learning models and AI agent systems on wearable data for precision health.
+Researcher, AI & Data Science at **Weill Cornell Medicine-Qatar** (Doha, Qatar) — building multi-agent AI systems and machine learning models, including on wearable and health data.
 
 ## 🎓 Education
 
@@ -30,6 +30,9 @@ Researcher, AI & Data Science at **Weill Cornell Medicine-Qatar** (Doha, Qatar) 
 
 ## 🏆 Certifications
 
+- Human Subjects Research: Biomedical Research Investigators, CITI Program (2026)
+- Good Clinical Practice (ICH), CITI Program (2026)
+- HIPAA Training, Weill Cornell Medicine (2026)
 - AWS Certified Cloud Practitioner (2024)
 
 ## 📞 Contact
