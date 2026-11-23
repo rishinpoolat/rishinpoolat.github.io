@@ -825,7 +825,6 @@ body::after {
 /* ---------- Cards: solid surface, gradient border on hover ----------
    main.js sets --mx / --my to the pointer position for the inner glow. */
 .skill-category,
-.project-card,
 .award-card,
 .facts {
   position: relative;
@@ -834,13 +833,11 @@ body::after {
   border: 1px solid var(--border);
 }
 .skill-category,
-.project-card,
 .award-card {
   isolation: isolate;
   transition: transform 0.5s var(--ease), border-color 0.3s, opacity 0.7s var(--ease);
 }
 .skill-category::before,
-.project-card::before,
 .award-card::before {
   /* gradient border that follows the cursor */
   content: "";
@@ -863,7 +860,6 @@ body::after {
   pointer-events: none;
 }
 .skill-category::after,
-.project-card::after,
 .award-card::after {
   content: "";
   position: absolute;
@@ -880,16 +876,13 @@ body::after {
   pointer-events: none;
 }
 .skill-category:hover,
-.project-card:hover,
 .award-card:hover {
   transform: translateY(-4px);
   border-color: var(--border-hi);
 }
 .skill-category:hover::before,
-.project-card:hover::before,
 .award-card:hover::before,
 .skill-category:hover::after,
-.project-card:hover::after,
 .award-card:hover::after {
   opacity: 1;
 }
@@ -1214,96 +1207,84 @@ body::after {
 }
 
 /* =========================================================
-   Projects
+   Projects: a single call-out linking to GitHub
    ========================================================= */
-.project-grid {
+.gh-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr));
-  gap: 16px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+  padding: 56px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: radial-gradient(600px 300px at 0% 0%, rgba(var(--accent-rgb), 0.12), transparent 70%),
+    var(--surface);
 }
-.project-card {
-  display: flex;
-  flex-direction: column;
-  padding: 26px;
+.gh-copy {
+  grid-column: 1;
+  grid-row: 1;
 }
-.project-card h3 {
-  font-size: 1.2rem;
-  transition: color 0.25s;
+.gh-copy h2 {
+  margin-bottom: 14px;
 }
-.project-card:hover h3 {
-  color: var(--accent-2);
+.gh-copy > p:not(.sec-tag) {
+  max-width: 460px;
+  font-size: 1.05rem;
 }
-.project-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-.project-flag {
-  align-self: flex-start;
-  margin-bottom: 12px;
-  padding: 2px 10px;
-  border-radius: 6px;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: #0b0b0c;
-  background: var(--grad);
-}
-.stack {
+.gh-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin: 4px 0 20px;
+  gap: 12px;
+  margin-top: 26px;
 }
-.stack li {
+.gh-actions .btn-ghost {
   font-family: var(--mono);
-  font-size: 0.72rem;
-  color: var(--faint);
-}
-.stack li:not(:last-child)::after {
-  content: " /";
-  color: var(--border-hi);
-}
-.project-link,
-.project-private {
-  margin-top: auto;
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-.project-link {
-  color: #fff;
-}
-.project-link .fa-arrow-right {
-  font-size: 0.8em;
-  transition: transform 0.3s var(--ease);
-}
-.project-link:hover {
-  color: var(--accent);
-}
-.project-link:hover .fa-arrow-right {
-  transform: translateX(4px);
-}
-.project-private {
-  font-family: var(--mono);
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: var(--faint);
 }
-.project-grid:not(.expanded) .project-card.more {
-  display: none;
+/* Contribution-style grid: main.js adds the cells, each pulsing on its own delay */
+.gh-grid {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  gap: 5px;
+  transform: perspective(900px) rotateY(-14deg) rotateX(6deg);
 }
-.more-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 36px;
+.gh-grid i {
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
 }
-.more-btn i {
-  transition: transform 0.3s var(--ease);
+.gh-grid i.l1 { background: rgba(var(--accent-rgb), 0.22); }
+.gh-grid i.l2 { background: rgba(var(--accent-rgb), 0.45); }
+.gh-grid i.l3 { background: rgba(var(--accent-rgb), 0.75); }
+.gh-grid i.l4 { background: var(--accent-2); }
+.gh-grid i.live {
+  animation: cell 4s ease-in-out infinite;
+  animation-delay: var(--t, 0s);
 }
-.more-btn[aria-expanded="true"] i {
-  transform: rotate(180deg);
+@keyframes cell {
+  0%, 70%, 100% { filter: none; transform: none; }
+  80% { filter: brightness(1.8); transform: scale(1.2); }
+}
+@media (max-width: 860px) {
+  .gh-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px 22px;
+  }
+  .gh-grid {
+    grid-column: 1;
+    grid-row: 2;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 4px;
+    transform: none;
+  }
 }
 
 /* =========================================================

@@ -75,11 +75,27 @@
     hero.addEventListener("pointerleave", () => { terminal.style.transform = ""; });
   }
 
+  /* ---------- Projects: fill the contribution-style grid ---------- */
+  const ghGrid = document.querySelector(".gh-grid");
+  if (ghGrid) {
+    const cells = window.matchMedia("(max-width: 860px)").matches ? 14 * 6 : 18 * 7;
+    for (let i = 0; i < cells; i++) {
+      const c = document.createElement("i");
+      const r = Math.random();
+      c.className = r > 0.9 ? "l4" : r > 0.75 ? "l3" : r > 0.55 ? "l2" : r > 0.35 ? "l1" : "";
+      if (c.className && !reduceMotion && Math.random() < 0.35) {
+        c.classList.add("live");
+        c.style.setProperty("--t", `${(Math.random() * 4).toFixed(2)}s`);
+      }
+      ghGrid.appendChild(c);
+    }
+  }
+
   /* ---------- Scroll reveals ---------- */
   const revealTargets = [
     ".sec-head", ".about-copy > p", ".facts",
-    ".skill-category", ".project-card", ".award-card",
-    ".contact-actions", ".contact .social"
+    ".skill-category", ".award-card",
+    ".contact-actions", ".contact .social", ".gh-card"
   ];
   const reveals = [...document.querySelectorAll(revealTargets.join(","))];
   reveals.forEach(el => {
@@ -137,7 +153,7 @@
 
   /* ---------- Card glow follows the cursor ---------- */
   if (canHover && !reduceMotion) {
-    document.querySelectorAll(".skill-category, .project-card, .award-card").forEach(card =>
+    document.querySelectorAll(".skill-category, .award-card").forEach(card =>
       card.addEventListener("pointermove", e => {
         const r = card.getBoundingClientRect();
         card.style.setProperty("--mx", `${e.clientX - r.left}px`);
@@ -146,20 +162,8 @@
     );
   }
 
-  /* ---------- Project cards tilt toward the cursor ---------- */
+  /* ---------- Buttons lean toward the cursor ---------- */
   if (canHover && !reduceMotion) {
-    document.querySelectorAll(".project-card").forEach(card => {
-      card.addEventListener("pointermove", e => {
-        if (!card.classList.contains("settled")) return; // let the reveal finish first
-        const r = card.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5;
-        const y = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transform = `perspective(900px) translateY(-4px) rotateX(${-y * 5}deg) rotateY(${x * 5}deg)`;
-      });
-      card.addEventListener("pointerleave", () => { card.style.transform = ""; });
-    });
-
-    /* Buttons lean toward the cursor */
     document.querySelectorAll(".magnetic, .social a").forEach(el => {
       el.addEventListener("pointermove", e => {
         const r = el.getBoundingClientRect();
@@ -170,21 +174,6 @@
       el.addEventListener("pointerleave", () => { el.style.transform = ""; });
     });
   }
-
-  /* ---------- Projects: show all ---------- */
-  const grid = document.getElementById("project-grid");
-  const moreBtn = document.querySelector(".more-btn");
-  const total = grid.querySelectorAll(".project-card").length;
-  const label = open => open
-    ? 'Show fewer <i class="fas fa-chevron-down"></i>'
-    : `Show all ${total} projects <i class="fas fa-chevron-down"></i>`;
-  moreBtn.innerHTML = label(false);
-  moreBtn.addEventListener("click", () => {
-    const open = grid.classList.toggle("expanded");
-    moreBtn.setAttribute("aria-expanded", open);
-    moreBtn.innerHTML = label(open);
-    if (!open) document.getElementById("projects").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
-  });
 
   /* ---------- Scroll-driven: header, progress, active link, timeline ---------- */
   const header = document.querySelector(".site-header");
